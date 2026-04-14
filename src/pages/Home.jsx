@@ -1,9 +1,34 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import products from "../data/products.json";
+import { getProducts } from "../api/productApi";
 import useCartStore from "../store/cartStore";
 
 function Home() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { addItem, getTotalCount } = useCartStore();
+
+  useEffect(() => {
+    getProducts()
+      .then((data) => setProducts(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-gray-400 text-sm">불러오는 중...</p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-400 text-sm">{error}</p>
+      </div>
+    );
 
   return (
     <div className="min-h-screen bg-white">

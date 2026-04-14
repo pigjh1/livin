@@ -1,16 +1,33 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import products from "../data/products.json";
+import { getProductById } from "../api/productApi";
 import useCartStore from "../store/cartStore";
 
 function ProductDetail() {
   const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { addItem, getTotalCount } = useCartStore();
 
-  if (!product)
+  useEffect(() => {
+    getProductById(id)
+      .then((data) => setProduct(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [id]);
+
+  if (loading)
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-400">상품을 찾을 수 없어요</p>
+        <p className="text-gray-400 text-sm">불러오는 중...</p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-400 text-sm">{error}</p>
       </div>
     );
 
