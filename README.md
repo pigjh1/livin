@@ -1,8 +1,8 @@
-# LIVIN 🛋️
+# livn 🛋️
 
 > 트렌디한 홈리빙/인테리어 소품 쇼핑몰 포트폴리오 프로젝트
 
-🔗 **배포 URL**: https://livin-pdsu.vercel.app
+🔗 **배포 URL**: https://livn-pdsu.vercel.app
 
 ---
 

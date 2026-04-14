@@ -44,7 +44,7 @@ function Header({ back }) {
         <img
           src="/logo.svg"
           className="h-5 w-auto dark:invert dark:brightness-200"
-          alt="LIVIN"
+          alt="LIVN"
         />
       </Link>
 
