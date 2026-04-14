@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Minimal Linen Shirt",
+    "price": 89000,
+    "category": "top",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500",
+    "description": "일상에 자연스럽게 스며드는 린넨 소재의 미니멀 셔츠"
+  },
+  {
+    "id": 2,
+    "name": "Wide Chino Pants",
+    "price": 112000,
+    "category": "bottom",
+    "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500",
+    "description": "편안한 와이드핏 치노 팬츠"
+  },
+  {
+    "id": 3,
+    "name": "Canvas Tote Bag",
+    "price": 45000,
+    "category": "bag",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500",
+    "description": "데일리로 사용하기 좋은 캔버스 토트백"
+  },
+  {
+    "id": 4,
+    "name": "Oversized Tee",
+    "price": 55000,
+    "category": "top",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
+    "description": "어디서나 편하게 입을 수 있는 오버핏 티셔츠"
+  },
+  {
+    "id": 5,
+    "name": "Slip-on Sneakers",
+    "price": 98000,
+    "category": "shoes",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+    "description": "가볍고 편안한 슬립온 스니커즈"
+  },
+  {
+    "id": 6,
+    "name": "Knit Cardigan",
+    "price": 135000,
+    "category": "top",
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500",
+    "description": "부드러운 니트 소재의 가디건"
+  }
+]
