@@ -1,6 +1,9 @@
-import products from "../src/data/products.json" assert { type: "json" };
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export default function handler(req, res) {
+  const filePath = join(process.cwd(), "src/data/products.json");
+  const products = JSON.parse(readFileSync(filePath, "utf-8"));
   const { id } = req.query;
 
   if (id) {
