@@ -2,98 +2,98 @@
   "products": [
     {
       "id": 1,
-      "name": "Linen Cushion Cover",
+      "name": "린넨 쿠션 커버",
       "price": 32000,
       "category": "cushion",
-      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500",
+      "image": "/images/product-01.webp",
       "description": "자연스러운 린넨 소재의 쿠션 커버, 어떤 공간에도 따뜻함을 더해줍니다"
     },
     {
       "id": 2,
-      "name": "Ceramic Vase",
+      "name": "세라믹 화병",
       "price": 58000,
       "category": "vase",
-      "image": "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=500",
+      "image": "/images/product-02.webp",
       "description": "미니멀한 라인의 세라믹 화병, 드라이플라워와 잘 어울립니다"
     },
     {
       "id": 3,
-      "name": "Concrete Candle",
+      "name": "콘크리트 캔들 홀더",
       "price": 24000,
       "category": "candle",
-      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500",
+      "image": "/images/product-03.webp",
       "description": "콘크리트 텍스처의 캔들 홀더, 은은한 불빛으로 분위기를 연출합니다"
     },
     {
       "id": 4,
-      "name": "Woven Storage Basket",
+      "name": "위빙 수납 바스켓",
       "price": 45000,
       "category": "storage",
-      "image": "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500",
+      "image": "/images/product-04.webp",
       "description": "핸드메이드 위빙 바스켓, 수납과 인테리어를 동시에"
     },
     {
       "id": 5,
-      "name": "Wooden Tray",
+      "name": "원목 트레이",
       "price": 38000,
       "category": "tray",
-      "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500",
+      "image": "/images/product-05.webp",
       "description": "원목 소재의 트레이, 테이블 위를 감각적으로 정리해줍니다"
     },
     {
       "id": 6,
-      "name": "Terrazzo Pot",
+      "name": "테라조 화분",
       "price": 52000,
       "category": "pot",
-      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500",
+      "image": "/images/product-06.webp",
       "description": "테라조 패턴의 화분, 작은 식물과 함께 공간에 생기를 더합니다"
     },
     {
       "id": 7,
-      "name": "Arch Mirror",
+      "name": "아치형 프레임 거울",
       "price": 128000,
       "category": "mirror",
-      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?w=500",
+      "image": "/images/product-07.webp",
       "description": "아치형 골드 프레임 거울, 공간을 넓고 세련되게 만들어줍니다"
     },
     {
       "id": 8,
-      "name": "Beige Linen Cushion",
+      "name": "베이지 린넨 쿠션",
       "price": 31000,
       "category": "cushion",
-      "image": "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?q=80&w=800&auto=format&fit=crop",
+      "image": "/images/product-08.webp",
       "description": "베이지 톤 린넨 쿠션, 소파 위에 자연스러운 포인트"
     },
     {
       "id": 9,
-      "name": "Minimal Table Lamp",
+      "name": "미니멀 테이블 램프",
       "price": 87000,
       "category": "lamp",
-      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=800&auto=format&fit=crop",
+      "image": "/images/product-09.webp",
       "description": "미니멀 디자인 테이블 램프, 은은한 조명을 제공합니다"
     },
     {
       "id": 10,
-      "name": "Cotton Table Cloth",
+      "name": "코튼 테이블 클로스",
       "price": 37000,
       "category": "textile",
-      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?q=80&w=800&auto=format&fit=crop",
+      "image": "/images/product-10.webp",
       "description": "코튼 테이블 클로스, 식탁 위를 부드럽게 연출합니다"
     },
     {
       "id": 11,
-      "name": "Marble Coaster Set",
+      "name": "대리석 코스터 세트",
       "price": 36000,
       "category": "coaster",
-      "image": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500",
+      "image": "/images/product-11.webp",
       "description": "천연 대리석 코스터 4개 세트, 테이블을 고급스럽게 연출합니다"
     },
     {
       "id": 12,
-      "name": "Linen Table Runner",
+      "name": "린넨 테이블 러너",
       "price": 22000,
       "category": "textile",
-      "image": "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=500",
+      "image": "/images/product-12.webp",
       "description": "내추럴 린넨 테이블 러너, 식탁 위 분위기를 한층 높여줍니다"
     }
   ]

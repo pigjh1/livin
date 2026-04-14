@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Linen Cushion Cover",
+    "name": "린넨 쿠션 커버",
     "price": 32000,
     "category": "cushion",
     "image": "/images/product-01.webp",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Ceramic Vase",
+    "name": "세라믹 화병",
     "price": 58000,
     "category": "vase",
     "image": "/images/product-02.webp",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Concrete Candle",
+    "name": "콘크리트 캔들 홀더",
     "price": 24000,
     "category": "candle",
     "image": "/images/product-03.webp",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "name": "Woven Storage Basket",
+    "name": "위빙 수납 바스켓",
     "price": 45000,
     "category": "storage",
     "image": "/images/product-04.webp",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "name": "Wooden Tray",
+    "name": "원목 트레이",
     "price": 38000,
     "category": "tray",
     "image": "/images/product-05.webp",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "name": "Terrazzo Pot",
+    "name": "테라조 화분",
     "price": 52000,
     "category": "pot",
     "image": "/images/product-06.webp",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "name": "Arch Mirror",
+    "name": "아치형 프레임 거울",
     "price": 128000,
     "category": "mirror",
     "image": "/images/product-07.webp",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "name": "Beige Linen Cushion",
+    "name": "베이지 린넨 쿠션",
     "price": 31000,
     "category": "cushion",
     "image": "/images/product-08.webp",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "name": "Minimal Table Lamp",
+    "name": "미니멀 테이블 램프",
     "price": 87000,
     "category": "lamp",
     "image": "/images/product-09.webp",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "name": "Cotton Table Cloth",
+    "name": "코튼 테이블 클로스",
     "price": 37000,
     "category": "textile",
     "image": "/images/product-10.webp",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "name": "Marble Coaster Set",
+    "name": "대리석 코스터 세트",
     "price": 36000,
     "category": "coaster",
     "image": "/images/product-11.webp",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "name": "Linen Table Runner",
+    "name": "린넨 테이블 러너",
     "price": 22000,
     "category": "textile",
     "image": "/images/product-12.webp",

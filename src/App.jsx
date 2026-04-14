@@ -3,9 +3,9 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import OrderComplete from "./pages/OrderComplete";
+import NotFound from "./pages/NotFound";
 import Toast from "./components/Toast";
 import useToastStore from "./store/toastStore";
-import NotFound from "./pages/NotFound";
 
 function App() {
   const { message, hideToast } = useToastStore();

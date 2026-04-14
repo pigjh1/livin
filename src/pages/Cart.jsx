@@ -1,7 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
-import useCartStore from "../store/cartStore";
+import { X } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import QuantityStepper from "../components/QuantityStepper";
+import useCartStore from "../store/cartStore";
 
 function Cart() {
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ function Cart() {
             <p className="text-gray-400 mb-6">장바구니가 비어있어요</p>
             <Link
               to="/"
-              className="text-sm border border-black dark:border-white dark:text-white px-6 py-3 rounded-xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
+              className="text-md border border-black dark:border-white dark:text-white px-6 py-3 rounded-xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
             >
               쇼핑 계속하기
             </Link>
@@ -45,39 +47,30 @@ function Cart() {
                     />
                   </div>
                   <div className="flex-1">
-                    <p className="font-medium text-sm mb-1 dark:text-white">
+                    <p className="font-medium text-md mb-1 dark:text-white">
                       {item.name}
                     </p>
-                    <p className="text-gray-400 text-sm mb-3">
+                    <p className="text-gray-400 text-md mb-3">
                       {item.price.toLocaleString()}원
                     </p>
                     <div className="flex items-center gap-3">
-                      <button
-                        onClick={() =>
+                      <QuantityStepper
+                        quantity={item.quantity}
+                        onDecrease={() =>
                           updateQuantity(item.id, item.quantity - 1)
                         }
-                        className="w-7 h-7 border border-gray-200 dark:border-gray-700 dark:text-white rounded-lg text-sm hover:border-black dark:hover:border-white transition-colors"
-                      >
-                        −
-                      </button>
-                      <span className="text-sm w-4 text-center dark:text-white">
-                        {item.quantity}
-                      </span>
-                      <button
-                        onClick={() =>
+                        onIncrease={() =>
                           updateQuantity(item.id, item.quantity + 1)
                         }
-                        className="w-7 h-7 border border-gray-200 dark:border-gray-700 dark:text-white rounded-lg text-sm hover:border-black dark:hover:border-white transition-colors"
-                      >
-                        +
-                      </button>
+                      />
                     </div>
                   </div>
                   <button
                     onClick={() => removeItem(item.id)}
                     className="text-gray-300 hover:text-black dark:hover:text-white transition-colors text-lg self-start"
+                    aria-label="항목 삭제"
                   >
-                    ×
+                    <X size={16} />
                   </button>
                 </div>
               ))}
@@ -86,8 +79,8 @@ function Cart() {
             {/* 합계 */}
             <div className="border-t border-gray-100 dark:border-gray-800 pt-6 mb-6">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm text-gray-400">총 상품 수</span>
-                <span className="text-sm dark:text-white">
+                <span className="text-md text-gray-400">총 상품 수</span>
+                <span className="text-md dark:text-white">
                   {getTotalCount()}개
                 </span>
               </div>
@@ -102,13 +95,13 @@ function Cart() {
             {/* 버튼 */}
             <button
               onClick={() => navigate("/order-complete")}
-              className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200 mb-3"
+              className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-md font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200 mb-3"
             >
               주문하기
             </button>
             <button
               onClick={clearCart}
-              className="w-full border border-gray-200 dark:border-gray-700 py-4 rounded-xl text-sm text-gray-400 hover:border-black hover:text-black dark:hover:border-white dark:hover:text-white transition-colors duration-200"
+              className="w-full border border-gray-200 dark:border-gray-700 py-4 rounded-xl text-md text-gray-400 hover:border-black hover:text-black dark:hover:border-white dark:hover:text-white transition-colors duration-200"
             >
               장바구니 비우기
             </button>

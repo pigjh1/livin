@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
     tag: "NEW COLLECTION",
     title: "Live Your Style",
     desc: "트렌디한 라이프스타일을 위한 컬렉션",
-    img: {
-      sm: "/images/hero-01-sm.avif",
-      md: "/images/hero-01-md.avif",
-      lg: "/images/hero-01-lg.avif",
+    video: {
+      sm: "/images/hero-video-sm.mp4",
+      md: "/images/hero-video-md.mp4",
+      lg: "/images/hero-video-lg.mp4",
     },
   },
   {
@@ -17,19 +18,19 @@ const slides = [
     title: "Fresh Start",
     desc: "봄 시즌 특별 할인",
     img: {
-      sm: "/images/hero-02-sm.avif",
-      md: "/images/hero-02-md.avif",
-      lg: "/images/hero-02-lg.avif",
+      sm: "/images/hero-01-sm.avif",
+      md: "/images/hero-01-md.avif",
+      lg: "/images/hero-01-lg.avif",
     },
   },
   {
     tag: "LIMITED",
     title: "Only Today",
     desc: "오늘만 만나볼 수 있는 아이템",
-    video: {
-      sm: "/images/hero-video-sm.mp4",
-      md: "/images/hero-video-md.mp4",
-      lg: "/images/hero-video-lg.mp4",
+    img: {
+      sm: "/images/hero-02-sm.avif",
+      md: "/images/hero-02-md.avif",
+      lg: "/images/hero-02-lg.avif",
     },
   },
   {
@@ -131,7 +132,6 @@ function Hero() {
           {/* overlay */}
           <div className="absolute inset-0 bg-black/40" />
 
-          {/* TEXT */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
             <motion.p
               className="text-xs tracking-widest mb-2"
@@ -152,7 +152,7 @@ function Hero() {
             </motion.h2>
 
             <motion.p
-              className="text-sm md:text-base text-gray-200"
+              className="text-md md:text-xl text-gray-200"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -163,20 +163,20 @@ function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* prev */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-xl opacity-70 hover:opacity-100"
+        aria-label="이전 슬라이드"
       >
-        ←
+        <ChevronLeft size={24} />
       </button>
 
-      {/* next */}
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-xl opacity-70 hover:opacity-100"
+        aria-label="다음 슬라이드"
       >
-        →
+        <ChevronRight size={24} />
       </button>
 
       {/* indicator */}

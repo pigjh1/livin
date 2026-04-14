@@ -18,7 +18,7 @@ function ProductCard({ product }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <p className="text-md mb-3font-medium dark:text-white mb-2">
+        <p className="text-lg mb-3 font-blod dark:text-white mb-2">
           {product.name}
         </p>
         <p className="text-md text-gray-400">
@@ -31,7 +31,7 @@ function ProductCard({ product }) {
           addItem(product);
           showToast(`${product.name} 장바구니에 담겼어요 🛒`);
         }}
-        className={`mt-2 w-full text-sm py-2 rounded-lg border transition-colors duration-200
+        className={`mt-2 w-full text-md py-2 rounded-lg border transition-colors duration-200
           ${
             isInCart
               ? "border-secondary bg-secondary text-black font-medium cursor-default"

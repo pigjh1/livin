@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ShoppingCart, Sun, Moon, ArrowLeft } from "lucide-react";
 import useCartStore from "../store/cartStore";
 import useDarkMode from "../hooks/useDarkMode";
 
@@ -24,47 +25,50 @@ function Header({ back }) {
         <Link
           to="/"
           className="
-            text-sm
+            text-md
             text-gray-400
             hover:text-black
             dark:hover:text-white
             transition-colors
           "
+          aria-label="뒤로"
         >
-          ← 뒤로
+          <ArrowLeft size={24} />
         </Link>
       ) : (
         <span />
       )}
 
       {/* LOGO */}
-      <Link to="/" className="block">
+      <Link to="/" className="absolute left-1/2 -translate-x-1/2 block">
         <img
           src="/logo.svg"
-          alt="LIVIN"
           className="h-5 w-auto dark:invert dark:brightness-200"
+          alt="LIVIN"
         />
       </Link>
 
-      {/* RIGHT */}
       <div className="flex items-center gap-4">
-        {/* DARK MODE */}
         <button
           onClick={() => setIsDark(!isDark)}
           className="
             text-xl
-            text-gray-400
+            text-gray-800
             hover:text-black
             dark:hover:text-white
             transition-colors
           "
+          aria-label="모드 변경"
         >
-          {isDark ? "☀️" : "🌙"}
+          {isDark ? <Sun size={24} /> : <Moon size={24} />}
         </button>
 
-        {/* CART */}
         <Link to="/cart" className="relative">
-          <span className="text-xl">🛒</span>
+          <span className="sr-only">
+            장바구니, 담긴 상품 {getTotalCount()}개
+          </span>
+
+          <ShoppingCart size={24} />
 
           {getTotalCount() > 0 && (
             <span
@@ -80,6 +84,7 @@ function Header({ back }) {
                 flex items-center justify-center
                 font-semibold
               "
+              aria-hidden="true"
             >
               {getTotalCount()}
             </span>
