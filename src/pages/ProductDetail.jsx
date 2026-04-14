@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getProductById } from "../api/productApi";
 import useCartStore from "../store/cartStore";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { addItem, getTotalCount } = useCartStore();
+  const { addItem } = useCartStore();
 
   useEffect(() => {
     getProductById(id)
@@ -19,40 +21,30 @@ function ProductDetail() {
 
   if (loading)
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-400 text-sm">불러오는 중...</p>
+      <div className="min-h-screen bg-white dark:bg-dark-bg">
+        <Header back />
+        <div className="max-w-2xl mx-auto px-6 py-10 animate-pulse">
+          <div className="rounded-2xl bg-gray-100 dark:bg-gray-800 aspect-square mb-8" />
+          <div className="h-4 bg-gray-100 dark:bg-gray-800 rounded w-1/4 mb-3" />
+          <div className="h-6 bg-gray-100 dark:bg-gray-800 rounded w-3/4 mb-3" />
+          <div className="h-5 bg-gray-100 dark:bg-gray-800 rounded w-1/4 mb-6" />
+          <div className="h-4 bg-gray-100 dark:bg-gray-800 rounded w-full mb-2" />
+          <div className="h-4 bg-gray-100 dark:bg-gray-800 rounded w-2/3" />
+        </div>
       </div>
     );
 
   if (error)
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center dark:bg-dark-bg">
         <p className="text-red-400 text-sm">{error}</p>
       </div>
     );
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* 헤더 */}
-      <header className="sticky top-0 z-10 bg-white border-b border-gray-100 px-6 py-4 flex justify-between items-center">
-        <Link
-          to="/"
-          className="text-sm text-gray-400 hover:text-black transition-colors"
-        >
-          ← 뒤로
-        </Link>
-        <h1 className="text-xl font-bold tracking-widest">LIVIN</h1>
-        <Link to="/cart" className="relative">
-          <span className="text-sm">🛒</span>
-          {getTotalCount() > 0 && (
-            <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-              {getTotalCount()}
-            </span>
-          )}
-        </Link>
-      </header>
+    <div className="min-h-screen bg-white dark:bg-dark-bg">
+      <Header back />
 
-      {/* 상품 상세 */}
       <div className="max-w-2xl mx-auto px-6 py-10">
         <div className="rounded-2xl overflow-hidden bg-gray-50 aspect-square mb-8">
           <img
@@ -65,8 +57,10 @@ function ProductDetail() {
         <p className="text-xs tracking-widest text-gray-400 uppercase mb-1">
           {product.category}
         </p>
-        <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
-        <p className="text-xl font-medium mb-4">
+        <h2 className="text-2xl font-bold mb-2 dark:text-white">
+          {product.name}
+        </h2>
+        <p className="text-xl font-medium mb-4 dark:text-white">
           {product.price.toLocaleString()}원
         </p>
         <p className="text-gray-500 text-sm leading-relaxed mb-8">
@@ -75,11 +69,13 @@ function ProductDetail() {
 
         <button
           onClick={() => addItem(product)}
-          className="w-full bg-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+          className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200"
         >
           장바구니 담기
         </button>
       </div>
+
+      <Footer />
     </div>
   );
 }

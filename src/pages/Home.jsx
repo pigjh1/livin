@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getProducts } from "../api/productApi";
 import useCartStore from "../store/cartStore";
+import SkeletonCard from "../components/SkeletonCard";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { addItem, getTotalCount } = useCartStore();
+  const { addItem } = useCartStore();
 
   useEffect(() => {
     getProducts()
@@ -18,67 +22,58 @@ function Home() {
 
   if (loading)
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-400 text-sm">불러오는 중...</p>
+      <div className="min-h-screen bg-white dark:bg-dark-bg">
+        <Header />
+
+        <Hero />
+
+        <section className="px-6 pb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[...Array(6)].map((_, i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
+        </section>
+
+        <Footer />
       </div>
     );
 
   if (error)
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center dark:bg-dark-bg">
         <p className="text-red-400 text-sm">{error}</p>
       </div>
     );
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* 헤더 */}
-      <header className="sticky top-0 z-10 bg-white border-b border-gray-100 px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold tracking-widest">LIVIN</h1>
-        <Link to="/cart" className="relative">
-          <span className="text-sm">🛒</span>
-          {getTotalCount() > 0 && (
-            <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-              {getTotalCount()}
-            </span>
-          )}
-        </Link>
-      </header>
+    <div className="min-h-screen bg-white dark:bg-dark-bg">
+      <Header />
 
-      {/* 히어로 */}
-      <section className="px-6 py-16 text-center">
-        <p className="text-xs tracking-widest text-gray-400 mb-2">
-          NEW COLLECTION
-        </p>
-        <h2 className="text-4xl font-bold tracking-tight mb-4">
-          Live Your Style
-        </h2>
-        <p className="text-gray-500 text-sm">
-          트렌디한 라이프스타일을 위한 컬렉션
-        </p>
-      </section>
+      <Hero />
 
-      {/* 상품 그리드 */}
       <section className="px-6 pb-16">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {products.map((product) => (
             <div key={product.id} className="group">
               <Link to={`/product/${product.id}`}>
-                <div className="overflow-hidden rounded-xl bg-gray-50 aspect-square mb-3">
+                <div className="overflow-hidden rounded-xl bg-gray-50 dark:bg-dark-card aspect-square mb-3">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-sm font-medium">{product.name}</p>
+                <p className="text-sm font-medium dark:text-white">
+                  {product.name}
+                </p>
                 <p className="text-sm text-gray-400">
                   {product.price.toLocaleString()}원
                 </p>
               </Link>
               <button
                 onClick={() => addItem(product)}
-                className="mt-2 w-full text-xs border border-black py-2 rounded-lg hover:bg-black hover:text-white transition-colors duration-200"
+                className="mt-2 w-full text-xs border border-black dark:border-white dark:text-white py-2 rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
               >
                 장바구니 담기
               </button>
@@ -86,6 +81,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
