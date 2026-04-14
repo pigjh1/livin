@@ -58,35 +58,35 @@
     },
     {
       "id": 8,
-      "name": "Rattan Side Table",
-      "price": 95000,
-      "category": "furniture",
-      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500",
-      "description": "라탄 소재의 사이드 테이블, 자연스러운 보헤미안 무드"
+      "name": "Beige Linen Cushion",
+      "price": 31000,
+      "category": "cushion",
+      "image": "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?q=80&w=800&auto=format&fit=crop",
+      "description": "베이지 톤 린넨 쿠션, 소파 위에 자연스러운 포인트"
     },
     {
       "id": 9,
-      "name": "Dried Flower Bunch",
-      "price": 28000,
-      "category": "flower",
-      "image": "https://images.unsplash.com/photo-1487530811015-780780169993?w=500",
-      "description": "감각적으로 엮은 드라이플라워 부케, 오래도록 공간을 장식합니다"
+      "name": "Minimal Table Lamp",
+      "price": 87000,
+      "category": "lamp",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=800&auto=format&fit=crop",
+      "description": "미니멀 디자인 테이블 램프, 은은한 조명을 제공합니다"
     },
     {
       "id": 10,
+      "name": "Cotton Table Cloth",
+      "price": 37000,
+      "category": "textile",
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?q=80&w=800&auto=format&fit=crop",
+      "description": "코튼 테이블 클로스, 식탁 위를 부드럽게 연출합니다"
+    },
+    {
+      "id": 11,
       "name": "Marble Coaster Set",
       "price": 36000,
       "category": "coaster",
       "image": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500",
       "description": "천연 대리석 코스터 4개 세트, 테이블을 고급스럽게 연출합니다"
-    },
-    {
-      "id": 11,
-      "name": "Wall Macrame",
-      "price": 62000,
-      "category": "wall",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500",
-      "description": "핸드메이드 마크라메 월행잉, 벽면에 따뜻한 텍스처를 더합니다"
     },
     {
       "id": 12,

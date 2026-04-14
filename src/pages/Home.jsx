@@ -64,10 +64,10 @@ function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-sm font-medium dark:text-white">
+                <p className="text-md font-medium dark:text-white">
                   {product.name}
                 </p>
-                <p className="text-sm text-gray-400">
+                <p className="text-md text-gray-400 mt-1">
                   {product.price.toLocaleString()}원
                 </p>
               </Link>
