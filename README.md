@@ -21,7 +21,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 https://github.com/pigjh1/livin
 
-https://livin-fawn.vercel.app/
+livin-pdsu.vercel.app
 
 ```
 npm run dev
