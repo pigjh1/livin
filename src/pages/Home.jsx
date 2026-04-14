@@ -1,24 +1,35 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { getProducts } from "../api/productApi";
-import useCartStore from "../store/cartStore";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SkeletonCard from "../components/SkeletonCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import ProductCard from "../components/ProductCard";
+import useProducts from "../hooks/useProducts";
 
 function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const { addItem } = useCartStore();
+  const { products, loading, error } = useProducts();
+  const [activeCategory, setActiveCategory] = useState("전체");
+  const CATEGORIES = [
+    "전체",
+    "cushion",
+    "vase",
+    "candle",
+    "storage",
+    "tray",
+    "pot",
+    "mirror",
+    "furniture",
+    "flower",
+    "coaster",
+    "wall",
+    "textile",
+  ];
 
-  useEffect(() => {
-    getProducts()
-      .then((data) => setProducts(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
+  const filtered =
+    activeCategory === "전체"
+      ? products
+      : products.filter((p) => p.category === activeCategory);
 
   if (loading)
     return (
@@ -52,36 +63,48 @@ function Home() {
 
       <Hero />
 
-      <section className="px-6 pb-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <div key={product.id} className="group">
-              <Link to={`/product/${product.id}`}>
-                <div className="overflow-hidden rounded-xl bg-gray-50 dark:bg-dark-card aspect-square mb-3">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <p className="text-md font-medium dark:text-white">
-                  {product.name}
-                </p>
-                <p className="text-md text-gray-400 mt-1">
-                  {product.price.toLocaleString()}원
-                </p>
-              </Link>
-              <button
-                onClick={() => addItem(product)}
-                className="mt-2 w-full text-xs border border-black dark:border-white dark:text-white py-2 rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
-              >
-                장바구니 담기
-              </button>
-            </div>
+      <section className="px-6 mb-6">
+        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`flex-shrink-0 text-xs px-4 py-2 rounded-full border transition-colors duration-200
+                ${
+                  activeCategory === cat
+                    ? "bg-secondary border-secondary text-black font-medium"
+                    : "border-gray-200 dark:border-gray-700 text-gray-400 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white"
+                }`}
+            >
+              {cat}
+            </button>
           ))}
         </div>
       </section>
 
+      <section className="px-6 pb-16 flex-1">
+        {filtered.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-gray-400 text-sm">해당 카테고리 상품이 없어요</p>
+          </div>
+        ) : (
+          // 상품 그리드 부분 교체
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="grid grid-cols-2 md:grid-cols-3 gap-6"
+            >
+              {filtered.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        )}
+      </section>
       <Footer />
     </div>
   );

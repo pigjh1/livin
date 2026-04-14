@@ -4,6 +4,7 @@ import { getProductById } from "../api/productApi";
 import useCartStore from "../store/cartStore";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import useToastStore from "../store/toastStore";
 
 function ProductDetail() {
   const { id } = useParams();
@@ -11,6 +12,7 @@ function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { addItem } = useCartStore();
+  const { showToast } = useToastStore();
 
   useEffect(() => {
     getProductById(id)
@@ -68,7 +70,10 @@ function ProductDetail() {
         </p>
 
         <button
-          onClick={() => addItem(product)}
+          onClick={() => {
+            addItem(product);
+            showToast(`${product.name} 장바구니에 담겼어요 🛒`);
+          }}
           className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200"
         >
           장바구니 담기
