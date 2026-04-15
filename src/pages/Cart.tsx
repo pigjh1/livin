@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { X } from "lucide-react";
+import { X, ShoppingCart } from "lucide-react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Button from "../components/ui/Button";
@@ -24,14 +24,24 @@ function Cart() {
 
       <PageTransition>
         <div className="max-w-2xl mx-auto px-6 py-10">
-          <h2 className="text-2xl font-bold mb-8 dark:text-white">장바구니</h2>
-
           {items.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-400 mb-6">장바구니가 비어있어요</p>
+              <div className="w-16 h-16 bg-black/5 dark:bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-check-pop">
+                <ShoppingCart
+                  className="text-black dark:text-white w-8 h-8"
+                  strokeWidth={2}
+                />
+              </div>
+              <h2 className="text-2xl font-bold mb-2 dark:text-white">
+                장바구니가 비어있어요
+              </h2>
+              <p className="text-gray-400 text-md mb-10">
+                마음에 드는 상품을 담아보세요
+              </p>
+
               <Link
                 to="/"
-                className="text-md border border-black dark:border-white dark:text-white px-6 py-3 rounded-xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
+                className="bg-black dark:bg-white dark:text-black text-white px-8 py-4 rounded-xl text-md font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200"
               >
                 쇼핑 계속하기
               </Link>
@@ -39,6 +49,9 @@ function Cart() {
           ) : (
             <>
               <div className="space-y-6 mb-10">
+                <h2 className="text-2xl font-bold mb-8 dark:text-white">
+                  장바구니
+                </h2>
                 {items.map((item) => (
                   <div key={item.id} className="flex gap-4">
                     <div className="w-24 h-24 rounded-xl overflow-hidden bg-gray-50 dark:bg-dark-card flex-shrink-0">

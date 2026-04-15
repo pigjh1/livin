@@ -6,29 +6,19 @@ import PageTransition from "../components/PageTransition";
 import Button from "../components/ui/Button";
 import useCartStore from "../store/cartStore";
 import useToastStore from "../store/toastStore";
-import { getProductById } from "../api/productApi";
-import reviews from "../data/reviews.json";
+import useProduct from "../hooks/useProduct";
+import useReviews from "../hooks/useReviews";
 
 function ProductDetail() {
   const TABS = ["상세정보", "구매평", "Q&A"];
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { product, loading, error } = useProduct(id!);
   const [activeTab, setActiveTab] = useState("상세정보");
   const { addItem, items } = useCartStore();
   const { showToast } = useToastStore();
 
   const isInCart = items.some((item) => item.id === product?.id);
-
-  useEffect(() => {
-    getProductById(id)
-      .then((data) => setProduct(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, [id]);
-
-  const productReviews = reviews.filter((r) => r.productId === Number(id));
+  const { reviews: productReviews } = useReviews(id!);
 
   if (loading)
     return (

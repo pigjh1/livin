@@ -120,7 +120,7 @@ function Home() {
       <PageTransition>
         <HomeHero slides={slides} />
 
-        <section className="px-6 py-12">
+        <section className="px-6 py-2">
           <h2 className="sr-only">상품검색 및 카테고리 선택</h2>
 
           <div className="px-6 mb-4">

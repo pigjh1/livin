@@ -1,19 +1,21 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../api/productApi";
 
 function useProducts() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {
+    data: products = [],
+    isLoading: loading,
+    error,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: getProducts,
+  });
 
-  useEffect(() => {
-    getProducts()
-      .then((data) => setProducts(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
-
-  return { products, loading, error };
+  return {
+    products,
+    loading,
+    error: error ? (error as Error).message : null,
+  };
 }
 
 export default useProducts;
