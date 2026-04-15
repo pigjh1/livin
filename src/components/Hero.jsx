@@ -122,14 +122,12 @@ function Hero() {
             />
           )}
 
-          {/* FALLBACK */}
           {!hasVideo && !hasImage && (
             <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center">
               <div className="text-white text-center"></div>
             </div>
           )}
 
-          {/* overlay */}
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
@@ -179,7 +177,6 @@ function Hero() {
         <ChevronRight size={24} />
       </button>
 
-      {/* indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => {
           const active = i === current;

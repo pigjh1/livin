@@ -17,7 +17,6 @@ function QuantityStepper({
 }: Props) {
   return (
     <div className="flex items-center gap-3">
-      {/* minus button */}
       <button
         onClick={onDecrease}
         aria-label="수량 감소"
@@ -35,7 +34,6 @@ function QuantityStepper({
         <Minus size={14} aria-hidden="true" />
       </button>
 
-      {/* quantity */}
       <span
         className="text-md w-4 text-center dark:text-white"
         aria-live="polite"
@@ -43,7 +41,6 @@ function QuantityStepper({
         {quantity}
       </span>
 
-      {/* plus button */}
       <button
         onClick={onIncrease}
         aria-label="수량 증가"

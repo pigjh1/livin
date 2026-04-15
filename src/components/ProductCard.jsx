@@ -38,7 +38,7 @@ function ProductCard({ product }) {
               : "border-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
           }`}
       >
-        {isInCart ? "✓ 이미 담겼어요" : "장바구니 담기"}
+        {isInCart ? "✓ 이미 장바구니에 있어요" : "장바구니 담기"}
       </button>
     </div>
   );

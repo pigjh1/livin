@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Sun, Moon, ArrowLeft } from "lucide-react";
 import useCartStore from "../store/cartStore";
 import useDarkMode from "../hooks/useDarkMode";
@@ -20,7 +21,6 @@ function Header({ back }) {
         shadow-sm
       "
     >
-      {/* LEFT */}
       {back ? (
         <Link
           to="/"
@@ -31,21 +31,22 @@ function Header({ back }) {
             dark:hover:text-white
             transition-colors
           "
-          aria-label="뒤로"
         >
+          <span className="sr-only">뒤로</span>
           <ArrowLeft size={24} />
         </Link>
       ) : (
         <span />
       )}
 
-      {/* LOGO */}
       <Link to="/" className="absolute left-1/2 -translate-x-1/2 block">
-        <img
-          src="/logo.svg"
-          className="h-5 w-auto dark:invert dark:brightness-200"
-          alt="LIVN"
-        />
+        <h1>
+          <img
+            src="/logo.svg"
+            className="h-5 w-auto dark:invert dark:brightness-200"
+            alt="LIVN"
+          />
+        </h1>
       </Link>
 
       <div className="flex items-center gap-4">
@@ -54,6 +55,7 @@ function Header({ back }) {
           className="
             text-xl
             text-gray-800
+            dark:text-white
             hover:text-black
             dark:hover:text-white
             transition-colors
@@ -70,25 +72,21 @@ function Header({ back }) {
 
           <ShoppingCart size={24} />
 
-          {getTotalCount() > 0 && (
-            <span
-              className="
-                absolute -top-2 -right-2
-                bg-black
-                dark:bg-white
-                dark:text-black
-                text-white
-                text-xs
-                rounded-full
-                w-5 h-5
-                flex items-center justify-center
-                font-semibold
-              "
-              aria-hidden="true"
-            >
-              {getTotalCount()}
-            </span>
-          )}
+          <AnimatePresence>
+            {getTotalCount() > 0 && (
+              <motion.span
+                key={getTotalCount()}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0 }}
+                transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                className="absolute -top-2 -right-2 bg-black dark:bg-white dark:text-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
+                aria-hidden="true"
+              >
+                {getTotalCount()}
+              </motion.span>
+            )}
+          </AnimatePresence>
         </Link>
       </div>
     </header>
