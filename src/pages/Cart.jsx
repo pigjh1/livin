@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/ui/Button.jsx";
 import PageTransition from "../components/PageTransition";
 import QuantityStepper from "../components/QuantityStepper";
 import useCartStore from "../store/cartStore";
@@ -92,18 +93,15 @@ function Cart() {
                 </div>
               </div>
 
-              <button
-                onClick={() => navigate("/order")}
-                className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-md font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200 mb-3"
-              >
-                주문하기
-              </button>
-              <button
-                onClick={clearCart}
-                className="w-full border border-gray-200 dark:border-gray-700 py-4 rounded-xl text-md text-gray-400 hover:border-black hover:text-black dark:hover:border-white dark:hover:text-white transition-colors duration-200"
-              >
-                장바구니 비우기
-              </button>
+              <div className="flex flex-col gap-3">
+                <Button variant="primary" onClick={() => navigate("/order")}>
+                  주문하기
+                </Button>
+
+                <Button variant="outline" onClick={clearCart}>
+                  장바구니 비우기
+                </Button>
+              </div>
             </>
           )}
         </div>

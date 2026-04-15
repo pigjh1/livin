@@ -55,7 +55,7 @@ function Header({ back }) {
           className="
             text-xl
             text-gray-800
-            dark:text-white
+            dark:text-white 
             hover:text-black
             dark:hover:text-white
             transition-colors

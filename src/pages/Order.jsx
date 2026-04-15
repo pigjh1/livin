@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/ui/Button.jsx";
+import Input from "../components/ui/Input.jsx";
+import Textarea from "../components/ui/Textarea.jsx";
 import PageTransition from "../components/PageTransition";
 import useCartStore from "../store/cartStore";
 
@@ -75,100 +78,47 @@ function Order() {
           </div>
 
           <div className="space-y-5">
-            <div>
-              <label
-                htmlFor="name"
-                className="text-sm font-medium dark:text-white block mb-2"
-              >
-                이름 <span className="text-brand">*</span>
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="홍길동"
-                className={`w-full text-sm bg-gray-50 dark:bg-dark-card dark:text-white border rounded-xl px-4 py-3 outline-none transition-colors
-                  ${errors.name ? "border-red-400" : "border-gray-200 dark:border-gray-700 focus:border-black dark:focus:border-white"}`}
-              />
-              {errors.name && (
-                <p className="text-red-400 text-xs mt-1">{errors.name}</p>
-              )}
-            </div>
+            <Input
+              label="이름"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="홍길동"
+              required
+              error={errors.name}
+            />
+            <Input
+              label="연락처"
+              name="phone"
+              type="tel"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="01012345678"
+              required
+              error={errors.phone}
+            />
 
-            <div>
-              <label
-                htmlFor="phone"
-                className="text-sm font-medium dark:text-white block mb-2"
-              >
-                연락처 <span className="text-brand">*</span>
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="01012345678"
-                className={`w-full text-sm bg-gray-50 dark:bg-dark-card dark:text-white border rounded-xl px-4 py-3 outline-none transition-colors
-                  ${errors.phone ? "border-red-400" : "border-gray-200 dark:border-gray-700 focus:border-black dark:focus:border-white"}`}
-              />
-              {errors.phone && (
-                <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
-              )}
-            </div>
+            <Input
+              label="주소"
+              name="address"
+              value={form.address}
+              onChange={handleChange}
+              placeholder="서울시 강남구 테헤란로 123"
+              required
+              error={errors.address}
+            />
 
-            <div>
-              <label
-                htmlFor="address"
-                className="text-sm font-medium dark:text-white block mb-2"
-              >
-                주소 <span className="text-brand">*</span>
-              </label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                value={form.address}
-                onChange={handleChange}
-                placeholder="서울시 강남구 테헤란로 123"
-                className={`w-full text-sm bg-gray-50 dark:bg-dark-card dark:text-white border rounded-xl px-4 py-3 outline-none transition-colors
-                  ${errors.address ? "border-red-400" : "border-gray-200 dark:border-gray-700 focus:border-black dark:focus:border-white"}`}
-              />
-              {errors.address && (
-                <p className="text-red-400 text-xs mt-1">{errors.address}</p>
-              )}
-            </div>
+            <Textarea
+              label="배송 메모"
+              name="memo"
+              value={form.memo}
+              onChange={handleChange}
+              placeholder="배송 시 요청사항을 입력해주세요"
+            />
 
-            <div>
-              <label
-                htmlFor="memo"
-                className="text-sm font-medium dark:text-white block mb-2"
-              >
-                배송 메모
-                <span className="text-gray-400 text-xs font-normal">
-                  (선택)
-                </span>
-              </label>
-              <textarea
-                id="memo"
-                name="memo"
-                value={form.memo}
-                onChange={handleChange}
-                placeholder="배송 시 요청사항을 입력해주세요"
-                rows={3}
-                className="w-full text-sm bg-gray-50 dark:bg-dark-card dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-black dark:focus:border-white transition-colors resize-none"
-              />
-            </div>
-          </div>
-
-          <button
-            onClick={handleSubmit}
-            className="w-full bg-black dark:bg-white dark:text-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200 mt-8"
-          >
+          <Button type="submit" variant="primary" onClick={handleSubmit}>
             {getTotalPrice().toLocaleString()}원 결제하기
-          </button>
+          </Button>
         </div>
         <Footer />
       </PageTransition>

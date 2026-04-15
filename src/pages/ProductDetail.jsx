@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
+import Button from "../components/ui/Button.jsx";
 import useCartStore from "../store/cartStore";
 import useToastStore from "../store/toastStore";
 import { getProductById } from "../api/productApi";
@@ -73,23 +74,18 @@ function ProductDetail() {
             {product.price.toLocaleString()}원
           </p>
 
-          <button
+          <Button
+            variant={isInCart ? "secondary" : "outline"}
             onClick={() => {
               if (isInCart) return;
               addItem(product);
               showToast(`${product.name} 장바구니에 담겼어요 🛒`);
             }}
-            className={`w-full py-4 rounded-xl border text-md transition-colors duration-200 mb-10
-            ${
-              isInCart
-                ? "border-secondary bg-secondary text-black font-medium cursor-default"
-                : "border-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-            }`}
           >
             {isInCart ? "✓ 이미 장바구니에 있어요" : "장바구니 담기"}
-          </button>
+          </Button>
 
-          <div className="border-b border-gray-100 dark:border-gray-800 mb-6">
+          <div className="border-b border-gray-100 dark:border-gray-800 mt-6 mb-6">
             <div className="flex gap-6">
               {TABS.map((tab) => (
                 <button
