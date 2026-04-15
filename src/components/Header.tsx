@@ -4,7 +4,11 @@ import { ShoppingCart, Sun, Moon, ArrowLeft } from "lucide-react";
 import useCartStore from "../store/cartStore";
 import useDarkMode from "../hooks/useDarkMode";
 
-function Header({ back }) {
+type HeaderProps = {
+  back?: boolean;
+};
+
+function Header({ back }: HeaderProps) {
   const { getTotalCount } = useCartStore();
   const [isDark, setIsDark] = useDarkMode();
 

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
-import Button from "../components/ui/Button.jsx";
+import Button from "../components/ui/Button";
 import useCartStore from "../store/cartStore";
 import useToastStore from "../store/toastStore";
 import { getProductById } from "../api/productApi";

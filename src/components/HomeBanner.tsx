@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
 
-export default function HomeBanner({ title, description, image, caption }) {
+type HomeBannerProps = {
+  title: string;
+  description?: string;
+  image: string;
+  caption?: string;
+};
+
+export default function HomeBanner({
+  title,
+  description,
+  image,
+  caption,
+}: HomeBannerProps) {
   return (
     <section className="px-6 py-28 text-center space-y-8">
       <motion.h2

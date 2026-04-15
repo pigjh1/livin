@@ -1,3 +1,15 @@
+import React from "react";
+
+type ButtonProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+  variant?: "primary" | "secondary" | "outline" | "danger" | "disabled";
+  size?: "sm" | "md" | "lg";
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  className?: string;
+};
+
 export default function Button({
   children,
   onClick,
@@ -6,7 +18,7 @@ export default function Button({
   type = "button",
   disabled = false,
   className = "",
-}) {
+}: ButtonProps) {
   const base =
     "w-full rounded-xl border transition-colors duration-200 font-medium flex items-center justify-center";
 

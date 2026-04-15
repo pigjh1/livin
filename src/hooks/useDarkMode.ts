@@ -15,7 +15,7 @@ function useDarkMode() {
     }
   }, [isDark]);
 
-  return [isDark, setIsDark];
+  return [isDark, setIsDark] as const;
 }
 
 export default useDarkMode;

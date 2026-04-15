@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Button from "../components/ui/Button.jsx";
+import Button from "../components/ui/Button";
 import PageTransition from "../components/PageTransition";
 import QuantityStepper from "../components/QuantityStepper";
 import useCartStore from "../store/cartStore";

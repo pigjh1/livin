@@ -90,7 +90,7 @@ function Hero() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
               onError={(e) => {
-                e.target.style.display = "none";
+                (e.target as HTMLVideoElement).style.display = "none";
               }}
             >
               <source src={slide.video.sm} media="(max-width:640px)" />
@@ -115,9 +115,6 @@ function Hero() {
               alt={slide.title}
               loading="eager"
               fetchPriority="high"
-              onError={(e) => {
-                e.target.src = "/images/fallback.jpg";
-              }}
               className="absolute inset-0 w-full h-full object-cover"
             />
           )}
