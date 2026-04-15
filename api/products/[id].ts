@@ -1,15 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  image: string;
-  description: string;
-}
+import type { Product } from "../../src/types/product";
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
   const filePath = join(process.cwd(), "src/data/products.json");

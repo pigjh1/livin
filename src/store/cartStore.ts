@@ -1,13 +1,5 @@
 import { create } from "zustand";
-
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  category: string;
-  description: string;
-};
+import type { Product } from "../types/product";
 
 type CartItem = Product & {
   quantity: number;

@@ -60,8 +60,11 @@ function ProductDetail() {
           <h2 className="text-2xl font-bold mb-2 dark:text-white">
             {product.name}
           </h2>
-          <p className="text-xl font-medium mb-6 dark:text-white">
+          <p className="text-xl font-medium mb-4 dark:text-white">
             {product.price.toLocaleString()}원
+          </p>
+          <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+            {product.description}
           </p>
 
           <Button
@@ -106,22 +109,58 @@ function ProductDetail() {
           </div>
 
           {activeTab === "상세정보" && (
-            <div className="py-4">
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                {product.description}
-              </p>
-              <div className="mt-6 space-y-3 border-t border-gray-100 dark:border-gray-800 pt-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">카테고리</span>
-                  <span className="dark:text-white">{product.category}</span>
+            <div className="py-6 space-y-10">
+              {product?.detail?.specs?.length > 0 && (
+                <div className="pt-6 space-y-3">
+                  <h3 className="text-ms font-semibold text-gray-900 dark:text-white mb-4">
+                    상품 정보
+                  </h3>
+                  <div className="rounded-xl border border-gray-100 dark:border-gray-800 divide-y divide-gray-100 dark:divide-gray-800">
+                    {product.detail.specs.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="flex justify-between px-4 py-3 text-sm"
+                      >
+                        <span className="text-gray-400">{item.label}</span>
+                        <span className="text-gray-800 dark:text-gray-200 font-medium">
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              )}
+
+              {product?.detail?.html?.length > 0 && (
+                <div className="pt-6 space-y-3">
+                  <h3 className="text-ms font-semibold text-gray-900 dark:text-white mb-4">
+                    상품 설명
+                  </h3>
+
+                  <div
+                    className="text-ms text-gray-600 dark:text-gray-300 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: product.detail.html }}
+                  />
+                </div>
+              )}
+
+              <div className="pt-6 space-y-3">
+                <h3 className="text-ms font-semibold text-gray-900 dark:text-white mb-4">
+                  배송/교환 정보
+                </h3>
+
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-400">배송</span>
-                  <span className="dark:text-white">3~5일 이내 출고</span>
+                  <span className="text-gray-800 dark:text-white font-medium">
+                    3~5일 이내 출고
+                  </span>
                 </div>
+
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-400">교환/반품</span>
-                  <span className="dark:text-white">수령 후 7일 이내</span>
+                  <span className="text-gray-800 dark:text-white font-medium">
+                    수령 후 7일 이내
+                  </span>
                 </div>
               </div>
             </div>
@@ -142,7 +181,7 @@ function ProductDetail() {
                     >
                       <div className="flex justify-between items-center mb-2">
                         <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium dark:text-white">
+                          <span className="text-ms font-medium dark:text-white">
                             {review.author}
                           </span>
                           <span className="text-black text-xs">
@@ -153,7 +192,7 @@ function ProductDetail() {
                           {review.date}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                      <p className="text-ms text-gray-500 dark:text-gray-400 leading-relaxed">
                         {review.content}
                       </p>
                     </div>

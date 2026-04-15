@@ -5,7 +5,16 @@
     "price": 32000,
     "category": "cushion",
     "image": "/images/product-01.webp",
-    "description": "자연스러운 린넨 소재의 쿠션 커버, 어떤 공간에도 따뜻함을 더해줍니다"
+    "description": "자연스러운 린넨 소재의 쿠션 커버, 어떤 공간에도 따뜻함을 더해줍니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "린넨 100%" },
+        { "label": "사이즈", "value": "45 x 45cm" },
+        { "label": "색상", "value": "내추럴 베이지" },
+        { "label": "세탁", "value": "손세탁 권장" }
+      ],
+      "html": "<p>자연에서 온 린넨 소재로 제작된 쿠션 커버입니다.</p><img src='/images/product/product-detail-01.webp' alt='' /><p>통기성이 좋아 사계절 사용 가능하며 시간이 지날수록 부드러워집니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>지퍼 방식으로 간편한 탈부착</li><li>커버 단품 (속커버 미포함)</li><li><strong>첫 세탁 시 약간의 수축 가능</strong></li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>Styling Tip</strong><br/>베이지, 화이트 톤 소파와 매치하면 따뜻한 무드 완성</p>"
+    }
   },
   {
     "id": 2,
@@ -13,7 +22,16 @@
     "price": 58000,
     "category": "vase",
     "image": "/images/product-02.webp",
-    "description": "미니멀한 라인의 세라믹 화병, 드라이플라워와 잘 어울립니다"
+    "description": "미니멀한 라인의 세라믹 화병, 드라이플라워와 잘 어울립니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "세라믹" },
+        { "label": "사이즈", "value": "지름 8cm x 높이 22cm" },
+        { "label": "색상", "value": "매트 화이트" },
+        { "label": "주의", "value": "전자레인지 사용 불가" }
+      ],
+      "html": "<p>핸드메이드 세라믹 화병입니다.</p><img src='/images/product/product-detail-02.webp' alt='' /><p>미니멀한 인테리어에 잘 어울립니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>드라이플라워 / 생화 사용 가능</li><li>핸드메이드 특성상 개체 차이 존재</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>Interior Tip</strong><br/>창가 단독 오브제로 추천</p>"
+    }
   },
   {
     "id": 3,
@@ -21,7 +39,16 @@
     "price": 24000,
     "category": "candle",
     "image": "/images/product-03.webp",
-    "description": "콘크리트 텍스처의 캔들 홀더, 은은한 불빛으로 분위기를 연출합니다"
+    "description": "콘크리트 텍스처의 캔들 홀더, 은은한 불빛으로 분위기를 연출합니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "콘크리트" },
+        { "label": "사이즈", "value": "지름 7cm x 높이 6cm" },
+        { "label": "색상", "value": "그레이" },
+        { "label": "호환", "value": "티라이트 캔들 사용 가능" }
+      ],
+      "html": "<p>콘크리트 질감과 촛불이 어우러진 제품입니다.</p><img src='/images/product/product-detail-03.webp' alt='' /><p>공간에 감각적인 분위기를 더합니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>티라이트 캔들 포함</li><li>화기 주변 주의</li><li>어린이 접근 금지</li></ul>"
+    }
   },
   {
     "id": 4,
@@ -29,70 +56,69 @@
     "price": 45000,
     "category": "storage",
     "image": "/images/product-04.webp",
-    "description": "핸드메이드 위빙 바스켓, 수납과 인테리어를 동시에"
+    "description": "핸드메이드 위빙 바스켓, 수납과 인테리어를 동시에",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "천연 라탄" },
+        { "label": "사이즈", "value": "지름 30cm x 높이 25cm" },
+        { "label": "색상", "value": "내추럴 브라운" },
+        { "label": "용도", "value": "수납, 인테리어 소품" }
+      ],
+      "html": "<p>천연 라탄 바스켓입니다.</p><img src='/images/product/product-detail-04.webp' alt='' /><p>자연 소재 특유의 따뜻한 질감</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>직사광선 피해주세요</li><li>습기 주의</li><li>핸드메이드 특성상 형태 차이 존재</li></ul>"
+    }
   },
+
   {
     "id": 5,
     "name": "원목 트레이",
     "price": 38000,
     "category": "tray",
     "image": "/images/product-05.webp",
-    "description": "원목 소재의 트레이, 테이블 위를 감각적으로 정리해줍니다"
+    "description": "원목 소재의 트레이, 테이블 위를 감각적으로 정리해줍니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "천연 원목 (월넛)" },
+        { "label": "사이즈", "value": "35 x 25 x 3cm" },
+        { "label": "색상", "value": "월넛 브라운" },
+        { "label": "마감", "value": "천연 오일 마감" }
+      ],
+      "html": "<p>천연 원목 트레이입니다.</p><p>나뭇결이 살아있는 자연스러운 텍스처</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>물에 오래 담그지 마세요</li><li>오일 관리 추천</li><li>식기세척기 사용 불가</li></ul>"
+    }
   },
+
   {
     "id": 6,
     "name": "테라조 화분",
     "price": 52000,
     "category": "pot",
     "image": "/images/product-06.webp",
-    "description": "테라조 패턴의 화분, 작은 식물과 함께 공간에 생기를 더합니다"
+    "description": "테라조 패턴의 화분, 작은 식물과 함께 공간에 생기를 더합니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "시멘트 + 테라조" },
+        { "label": "사이즈", "value": "지름 12cm x 높이 10cm" },
+        { "label": "색상", "value": "화이트 테라조" },
+        { "label": "배수", "value": "하단 배수홀 있음" }
+      ],
+      "html": "<p>테라조 패턴 화분입니다.</p><p>작은 식물과 잘 어울립니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>배수홀 있음</li><li>과습 방지</li></ul>"
+    }
   },
+
   {
     "id": 7,
     "name": "아치형 프레임 거울",
     "price": 128000,
     "category": "mirror",
     "image": "/images/product-07.webp",
-    "description": "아치형 골드 프레임 거울, 공간을 넓고 세련되게 만들어줍니다"
-  },
-  {
-    "id": 8,
-    "name": "베이지 린넨 쿠션",
-    "price": 31000,
-    "category": "cushion",
-    "image": "/images/product-08.webp",
-    "description": "베이지 톤 린넨 쿠션, 소파 위에 자연스러운 포인트"
-  },
-  {
-    "id": 9,
-    "name": "미니멀 테이블 램프",
-    "price": 87000,
-    "category": "lamp",
-    "image": "/images/product-09.webp",
-    "description": "미니멀 디자인 테이블 램프, 은은한 조명을 제공합니다"
-  },
-  {
-    "id": 10,
-    "name": "코튼 테이블 클로스",
-    "price": 37000,
-    "category": "textile",
-    "image": "/images/product-10.webp",
-    "description": "코튼 테이블 클로스, 식탁 위를 부드럽게 연출합니다"
-  },
-  {
-    "id": 11,
-    "name": "대리석 코스터 세트",
-    "price": 36000,
-    "category": "coaster",
-    "image": "/images/product-11.webp",
-    "description": "천연 대리석 코스터 4개 세트, 테이블을 고급스럽게 연출합니다"
-  },
-  {
-    "id": 12,
-    "name": "린넨 테이블 러너",
-    "price": 22000,
-    "category": "textile",
-    "image": "/images/product-12.webp",
-    "description": "내추럴 린넨 테이블 러너, 식탁 위 분위기를 한층 높여줍니다"
+    "description": "아치형 골드 프레임 거울, 공간을 넓고 세련되게 만들어줍니다",
+    "detail": {
+      "specs": [
+        { "label": "소재", "value": "메탈 프레임 + 유리" },
+        { "label": "사이즈", "value": "40 x 120cm" },
+        { "label": "색상", "value": "골드" },
+        { "label": "설치", "value": "벽걸이형 (앙카 포함)" }
+      ],
+      "html": "<p>아치형 골드 프레임 거울입니다.</p><p>공간 확장 효과</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>앙카 포함</li><li>2인 설치 권장</li></ul>"
+    }
   }
 ]
