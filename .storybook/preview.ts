@@ -1,6 +1,7 @@
+import type { Preview } from "@storybook/react";
 import "../src/index.css";
 
-const preview = {
+const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -52,6 +53,27 @@ const preview = {
             height: "1080px",
           },
         },
+      },
+    },
+    html: {
+      prettier: {
+        tabWidth: 2,
+        bracketSameLine: true,
+      },
+    },
+    options: {
+      storySort: {
+        order: [
+          "Intro",
+          "Foundation",
+          "Layout",
+          "UI",
+          "Component",
+          "Element",
+          "Animation",
+          "Page",
+          "Guideline",
+        ],
       },
     },
   },

@@ -2,13 +2,13 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import SkeletonCard from "../components/SkeletonCard";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import PageTransition from "../components/PageTransition";
-import Hero from "../components/Hero";
-import ProductCard from "../components/ProductCard";
-import ProductRow from "../components/ProductRow";
-import HomeBanner from "../components/HomeBanner";
+import HomeHero from "../components/home/HomeHero";
+import ProductCard from "../components/product/ProductCard";
+import ProductRow from "../components/product/ProductRow";
+import HomeBanner from "../components/home/HomeBanner";
 import useProducts from "../hooks/useProducts";
 import useDebounce from "../hooks/useDebounce";
 
@@ -18,6 +18,44 @@ function Home() {
   const [activeCategory, setActiveCategory] = useState("전체");
   const [sortOrder, setSortOrder] = useState("default");
   const debouncedSearch = useDebounce(search, 300);
+
+  const slides = [
+    {
+      tag: "NEW COLLECTION",
+      title: "Live Your Style",
+      desc: "트렌디한 라이프스타일을 위한 컬렉션",
+      video: {
+        sm: "/images/hero-video-sm.mp4",
+        md: "/images/hero-video-md.mp4",
+        lg: "/images/hero-video-lg.mp4",
+      },
+    },
+    {
+      tag: "SPRING SALE",
+      title: "Fresh Start",
+      desc: "봄 시즌 특별 할인",
+      img: {
+        sm: "/images/hero-01-sm.avif",
+        md: "/images/hero-01-md.avif",
+        lg: "/images/hero-01-lg.avif",
+      },
+    },
+    {
+      tag: "LIMITED",
+      title: "Only Today",
+      desc: "오늘만 만나볼 수 있는 아이템",
+      img: {
+        sm: "/images/hero-02-sm.avif",
+        md: "/images/hero-02-md.avif",
+        lg: "/images/hero-02-lg.avif",
+      },
+    },
+    {
+      tag: "COMING",
+      title: "New Arrival",
+      desc: "곧 공개됩니다",
+    },
+  ];
 
   const CATEGORIES = [
     "전체",
@@ -56,8 +94,6 @@ function Home() {
         <Header />
 
         <PageTransition>
-          <Hero />
-
           <section className="px-6 pb-16">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[...Array(6)].map((_, i) => (
@@ -82,7 +118,7 @@ function Home() {
     <div className="min-h-screen bg-white dark:bg-dark-bg">
       <Header />
       <PageTransition>
-        <Hero />
+        <HomeHero slides={slides} />
 
         <section className="px-6 py-12">
           <h2 className="sr-only">상품검색 및 카테고리 선택</h2>

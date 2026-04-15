@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import PageTransition from "../components/PageTransition";
 import Button from "../components/ui/Button";
 import useCartStore from "../store/cartStore";

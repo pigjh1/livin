@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import Button from "../components/ui/Button";
 import PageTransition from "../components/PageTransition";
-import QuantityStepper from "../components/QuantityStepper";
+import QuantityStepper from "../components/product/QuantityStepper";
 import useCartStore from "../store/cartStore";
 
 function Cart() {

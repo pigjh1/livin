@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Sun, Moon, ArrowLeft } from "lucide-react";
-import useCartStore from "../store/cartStore";
-import useDarkMode from "../hooks/useDarkMode";
+import useCartStore from "../../store/cartStore";
+import useDarkMode from "../../hooks/useDarkMode";
 
 type HeaderProps = {
   back?: boolean;

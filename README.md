@@ -2,7 +2,8 @@
 
 > 실제 쇼핑몰 서비스 흐름을 구현한 React 기반 UI/상태관리 포트폴리오
 
-🔗 **배포 URL**: https://livn-rose.vercel.app/
+- 🔗 **배포 URL**: https://livn-rose.vercel.app/
+- chromatic: https://main--69df25ecd988b74cfddf6bf7.chromatic.com/
 
 ---
 

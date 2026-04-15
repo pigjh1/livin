@@ -1,3 +1,16 @@
+import React from "react";
+
+type InputProps = {
+  label?: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  type?: string;
+  required?: boolean;
+  error?: string;
+};
+
 export default function Input({
   label,
   name,
@@ -7,7 +20,7 @@ export default function Input({
   type = "text",
   required = false,
   error,
-}) {
+}: InputProps) {
   return (
     <div>
       {label && (

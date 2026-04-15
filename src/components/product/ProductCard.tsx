@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Button from "../components/ui/Button";
-import useCartStore from "../store/cartStore";
-import useToastStore from "../store/toastStore";
+import Button from "../ui/Button";
+import useCartStore from "../../store/cartStore";
+import useToastStore from "../../store/toastStore";
 
 function ProductCard({ product }) {
   const { addItem, items } = useCartStore();

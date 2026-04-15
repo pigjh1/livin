@@ -2,45 +2,27 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const slides = [
-  {
-    tag: "NEW COLLECTION",
-    title: "Live Your Style",
-    desc: "트렌디한 라이프스타일을 위한 컬렉션",
-    video: {
-      sm: "/images/hero-video-sm.mp4",
-      md: "/images/hero-video-md.mp4",
-      lg: "/images/hero-video-lg.mp4",
-    },
-  },
-  {
-    tag: "SPRING SALE",
-    title: "Fresh Start",
-    desc: "봄 시즌 특별 할인",
-    img: {
-      sm: "/images/hero-01-sm.avif",
-      md: "/images/hero-01-md.avif",
-      lg: "/images/hero-01-lg.avif",
-    },
-  },
-  {
-    tag: "LIMITED",
-    title: "Only Today",
-    desc: "오늘만 만나볼 수 있는 아이템",
-    img: {
-      sm: "/images/hero-02-sm.avif",
-      md: "/images/hero-02-md.avif",
-      lg: "/images/hero-02-lg.avif",
-    },
-  },
-  {
-    tag: "COMING",
-    title: "New Arrival",
-    desc: "곧 공개됩니다",
-  },
-];
+type Slide = {
+  tag: string;
+  title: string;
+  desc: string;
+  video?: {
+    sm: string;
+    md: string;
+    lg: string;
+  };
+  img?: {
+    sm: string;
+    md: string;
+    lg: string;
+  };
+};
 
-function Hero() {
+type Props = {
+  slides: Slide[];
+};
+
+function Hero({ slides }: Props) {
   const [current, setCurrent] = useState(0);
   const [isHover, setIsHover] = useState(false);
 

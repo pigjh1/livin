@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 import useCartStore from "../store/cartStore";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import PageTransition from "../components/PageTransition";
 
 function OrderComplete() {
@@ -19,8 +20,11 @@ function OrderComplete() {
       <div className="flex-1 flex flex-col items-center justify-center px-6">
         <PageTransition>
           <div className="text-center">
-            <div className="w-16 h-16 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-white dark:text-black text-2xl">✓</span>
+            <div className="w-16 h-16 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-6 animate-check-pop">
+              <Check
+                className="text-white dark:text-black w-8 h-8 animate-check-fade"
+                strokeWidth={3}
+              />
             </div>
             <h2 className="text-2xl font-bold mb-2 dark:text-white">
               주문이 완료됐어요

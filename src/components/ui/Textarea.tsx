@@ -1,3 +1,14 @@
+import React from "react";
+
+type TextareaProps = {
+  label?: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  placeholder?: string;
+  rows?: number;
+};
+
 export default function Textarea({
   label,
   name,
@@ -5,7 +16,7 @@ export default function Textarea({
   onChange,
   placeholder,
   rows = 3,
-}) {
+}: TextareaProps) {
   return (
     <div>
       {label && (
