@@ -1,6 +1,6 @@
-import { create } from "@storybook/theming";
+import { create } from "storybook/theming";
 
-const Theme = create({
+export default create({
   base: "light", // 또는 'dark'
 
   colorPrimary: "#9A450C",
@@ -34,8 +34,6 @@ const Theme = create({
   // Brand Info
   brandTitle: "LIVN",
   brandUrl: "https://livn-rose.vercel.app/",
-  brandImage: "https://livn-rose.vercel.app/images/logo.svg",
+  brandImage: "https://livn-rose.vercel.app/logo.svg",
   brandTarget: "_blank",
 });
-
-export default Theme;
