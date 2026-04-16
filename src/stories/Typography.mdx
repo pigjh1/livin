@@ -6,35 +6,38 @@ export const typography = {
   type: {
     primary: '"Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif',
   },
-
   weight: {
     regular: "400",
     medium: "500",
     semibold: "600",
     bold: "700",
   },
-
   size: {
-    xs: 12,   // text-xs
-    sm: 14,   // text-sm
-    base: 16, // text-base
-    lg: 18,   // text-lg
-    xl: 20,   // text-xl
-    "2xl": 24, // text-2xl
-    "3xl": 30, // text-3xl
-    "4xl": 36, // text-4xl
-    "5xl": 48, // text-5xl
+    xs: 12,
+    sm: 14,
+    base: 16,
+    lg: 18,
+    xl: 20,
+    "2xl": 24,
+    "3xl": 30,
+    "4xl": 36,
+    "5xl": 48,
   },
 };
 
 export const SampleText = "The quick brown fox jumps over the lazy dog";
 
-
 # Typography
 
-**Font:** Pretendard
+**Font:** Pretendard — 한글과 영문 모두 최적화된 가독성을 제공하는 폰트
 
-**Weights:** 400(regular), 500(medium), 700(bold)
+**Weights:** 400 (Regular) · 500 (Medium)  · 700 (Bold)
+
+---
+
+## Font Scale
+
+전체 타입 스케일입니다.
 
 <Typeset
   fontSizes={[
@@ -50,5 +53,35 @@ export const SampleText = "The quick brown fox jumps over the lazy dog";
   ]}
   fontWeight={typography.weight.regular}
   sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+
+## Font Weights
+
+### Regular 400
+
+<Typeset
+  fontSizes={[typography.size["2xl"]]}
+  fontWeight={typography.weight.regular}
+  sampleText="Regular 400 — 자연스러운 일상의 공간"
+  fontFamily={typography.type.primary}
+/>
+
+### Medium 500
+
+<Typeset
+  fontSizes={[typography.size["2xl"]]}
+  fontWeight={typography.weight.medium}
+  sampleText="Medium 500 — 감각적인 라이프스타일"
+  fontFamily={typography.type.primary}
+/>
+
+### Bold 700
+
+<Typeset
+  fontSizes={[typography.size["2xl"]]}
+  fontWeight={typography.weight.bold}
+  sampleText="Bold 700 — LIVIN 브랜드 타이포그래피"
   fontFamily={typography.type.primary}
 />
