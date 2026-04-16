@@ -138,7 +138,7 @@ function ProductDetail() {
                   </h3>
 
                   <div
-                    className="text-ms text-gray-600 dark:text-gray-300 leading-relaxed"
+                    className="prose dark:prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: product.detail.html }}
                   />
                 </div>

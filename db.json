@@ -12,9 +12,10 @@
           { "label": "소재", "value": "린넨 100%" },
           { "label": "사이즈", "value": "45 x 45cm" },
           { "label": "색상", "value": "내추럴 베이지" },
-          { "label": "세탁", "value": "손세탁 권장" }
+          { "label": "세탁", "value": "손세탁 권장 (30도 이하)" },
+          { "label": "원산지", "value": "국내 제조" }
         ],
-        "html": "<p>자연에서 온 린넨 소재로 제작된 쿠션 커버입니다.</p><img src='/images/product/product-detail-01.webp' alt='' /><p>통기성이 좋아 사계절 사용 가능하며 시간이 지날수록 부드러워집니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>지퍼 방식으로 간편한 탈부착</li><li>커버 단품 (속커버 미포함)</li><li><strong>첫 세탁 시 약간의 수축 가능</strong></li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>Styling Tip</strong><br/>베이지, 화이트 톤 소파와 매치하면 따뜻한 무드 완성</p>"
+        "html": "<p>자연에서 온 린넨 소재로 정성껏 제작된 쿠션 커버입니다.</p><p>린넨 특유의 자연스러운 질감이 공간에 따뜻함을 더하며, 통기성이 뛰어나 사계절 내내 쾌적하게 사용할 수 있습니다. 사용할수록 부드러워지는 소재 특성으로 오래 사용할수록 더욱 매력적입니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>지퍼 방식으로 커버 탈부착이 간편합니다</li><li>커버 단품 상품으로 속커버는 포함되지 않습니다</li><li>첫 세탁 시 약간의 수축이 있을 수 있으니 참고해주세요</li><li>직사광선에 장시간 노출 시 변색될 수 있습니다</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Styling Tip</strong><br/>베이지, 크림, 화이트 톤의 소파와 매치하면 따뜻하고 자연스러운 무드가 완성됩니다. 다양한 사이즈의 쿠션과 레이어드하면 더욱 풍성한 연출이 가능합니다.</p><img src='/images/product/product-detail-01-01.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-02.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-03.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-04.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-05.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-06.webp' alt='' class='block w-full' /><img src='/images/product/product-detail-01-07.webp' alt='' class='block w-full' />"
       }
     },
     {
@@ -29,9 +30,10 @@
           { "label": "소재", "value": "세라믹" },
           { "label": "사이즈", "value": "지름 8cm x 높이 22cm" },
           { "label": "색상", "value": "매트 화이트" },
-          { "label": "주의", "value": "전자레인지 사용 불가" }
+          { "label": "주의", "value": "전자레인지 / 식기세척기 사용 불가" },
+          { "label": "제조", "value": "핸드메이드" }
         ],
-        "html": "<p>핸드메이드 세라믹 화병입니다.</p><img src='/images/product/product-detail-02.webp' alt='' /><p>미니멀한 인테리어에 잘 어울립니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>드라이플라워 / 생화 사용 가능</li><li>핸드메이드 특성상 개체 차이 존재</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>Interior Tip</strong><br/>창가 단독 오브제로 추천</p>"
+        "html": "<p>숙련된 도예 장인이 하나하나 직접 빚어 만든 핸드메이드 세라믹 화병입니다.</p><img src='/images/product/product-detail-02.webp' alt='세라믹 화병 상세' /><p>군더더기 없는 미니멀한 실루엣과 손으로 빚은 듯한 자연스러운 표면 텍스처가 공간에 감각적인 포인트를 더합니다. 드라이플라워, 생화, 나뭇가지 등 다양하게 연출할 수 있습니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>드라이플라워와 생화 모두 사용 가능합니다</li><li>핸드메이드 특성상 제품마다 미세한 형태 차이가 있을 수 있습니다</li><li>충격에 약하니 취급에 주의해주세요</li><li>세척 시 부드러운 수세미로 가볍게 닦아주세요</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Interior Tip</strong><br/>창가나 선반 위에 단독 오브제로 두거나, 크기가 다른 화병 2~3개를 함께 배치하면 더욱 세련된 분위기를 연출할 수 있습니다.</p>"
       }
     },
     {
@@ -45,10 +47,11 @@
         "specs": [
           { "label": "소재", "value": "콘크리트" },
           { "label": "사이즈", "value": "지름 7cm x 높이 6cm" },
-          { "label": "색상", "value": "그레이" },
-          { "label": "호환", "value": "티라이트 캔들 사용 가능" }
+          { "label": "색상", "value": "내추럴 그레이" },
+          { "label": "호환", "value": "티라이트 캔들 (지름 3.8cm 이하)" },
+          { "label": "구성", "value": "홀더 1개 + 티라이트 캔들 1개" }
         ],
-        "html": "<p>콘크리트 질감과 촛불이 어우러진 제품입니다.</p><img src='/images/product/product-detail-03.webp' alt='' /><p>공간에 감각적인 분위기를 더합니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>티라이트 캔들 포함</li><li>화기 주변 주의</li><li>어린이 접근 금지</li></ul>"
+        "html": "<p>거친 콘크리트 텍스처와 은은한 촛불이 만나 독특하고 감각적인 분위기를 연출하는 캔들 홀더입니다.</p><img src='/images/product/product-detail-03.webp' alt='콘크리트 캔들 홀더 상세' /><p>인더스트리얼한 소재감이 따뜻한 불빛과 대비를 이루며 공간에 특별한 감성을 더합니다. 여러 개를 모아두면 더욱 멋스러운 연출이 가능합니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>티라이트 캔들 1개가 포함되어 있습니다</li><li>화기 주변에 가연성 물질을 두지 마세요</li><li>어린이 손에 닿지 않는 곳에 보관해주세요</li><li>캔들 연소 중 자리를 비우지 마세요</li><li>내열 소재이나 직접 화기에 닿지 않도록 주의해주세요</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Mood Tip</strong><br/>여러 개를 다양한 높이로 배치하면 더욱 드라마틱한 분위기를 연출할 수 있습니다. 저녁 식사 테이블이나 욕실 인테리어에도 잘 어울립니다.</p>"
       }
     },
     {
@@ -63,12 +66,12 @@
           { "label": "소재", "value": "천연 라탄" },
           { "label": "사이즈", "value": "지름 30cm x 높이 25cm" },
           { "label": "색상", "value": "내추럴 브라운" },
-          { "label": "용도", "value": "수납, 인테리어 소품" }
+          { "label": "용도", "value": "수납, 인테리어 소품, 플랜터 커버" },
+          { "label": "제조", "value": "핸드메이드" }
         ],
-        "html": "<p>천연 라탄 바스켓입니다.</p><img src='/images/product/product-detail-04.webp' alt='' /><p>자연 소재 특유의 따뜻한 질감</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>직사광선 피해주세요</li><li>습기 주의</li><li>핸드메이드 특성상 형태 차이 존재</li></ul>"
+        "html": "<p>숙련된 장인이 천연 라탄을 한 올 한 올 손으로 엮어 만든 위빙 바스켓입니다.</p><img src='/images/product/product-detail-04.webp' alt='위빙 수납 바스켓 상세' /><p>수납 용도는 물론 화분 커버, 잡지 정리대, 담요 보관함 등 다양하게 활용할 수 있습니다. 자연 소재 특유의 따뜻한 질감이 어떤 공간에도 자연스럽게 어우러집니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>직사광선에 장시간 노출 시 변색될 수 있습니다</li><li>과도한 습기는 피해주세요</li><li>핸드메이드 특성상 형태와 색감에 미세한 차이가 있을 수 있습니다</li><li>무거운 물건 수납 시 형태가 변형될 수 있습니다</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Styling Tip</strong><br/>화분 커버로 활용하면 흙과 화분이 가려져 더욱 세련된 플랜트 인테리어가 완성됩니다. 담요나 쿠션을 담아두면 거실 인테리어 소품으로도 완벽합니다.</p>"
       }
     },
-
     {
       "id": 5,
       "name": "원목 트레이",
@@ -81,12 +84,12 @@
           { "label": "소재", "value": "천연 원목 (월넛)" },
           { "label": "사이즈", "value": "35 x 25 x 3cm" },
           { "label": "색상", "value": "월넛 브라운" },
-          { "label": "마감", "value": "천연 오일 마감" }
+          { "label": "마감", "value": "천연 오일 마감" },
+          { "label": "원산지", "value": "국내 제조" }
         ],
-        "html": "<p>천연 원목 트레이입니다.</p><p>나뭇결이 살아있는 자연스러운 텍스처</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>물에 오래 담그지 마세요</li><li>오일 관리 추천</li><li>식기세척기 사용 불가</li></ul>"
+        "html": "<p>천연 월넛 원목을 사용해 정성껏 제작한 트레이입니다.</p><p>원목 특유의 자연스러운 나뭇결이 살아있어 세상에 하나뿐인 나만의 트레이가 됩니다. 천연 오일로 마감하여 나무의 질감을 그대로 살리면서도 내구성을 높였습니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>물에 오래 담그지 마세요</li><li>3~6개월 주기로 천연 오일을 발라주면 오래 사용할 수 있습니다</li><li>식기세척기 사용은 피해주세요</li><li>직사광선이나 열원 근처에 두지 마세요</li><li>나뭇결과 색상은 제품마다 조금씩 다를 수 있습니다</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Styling Tip</strong><br/>캔들, 화병, 스몰 오브제를 트레이 위에 모아두면 테이블 스타일링이 완성됩니다. 침실 협탁이나 욕실 세면대 위에도 잘 어울립니다.</p>"
       }
     },
-
     {
       "id": 6,
       "name": "테라조 화분",
@@ -96,15 +99,15 @@
       "description": "테라조 패턴의 화분, 작은 식물과 함께 공간에 생기를 더합니다",
       "detail": {
         "specs": [
-          { "label": "소재", "value": "시멘트 + 테라조" },
+          { "label": "소재", "value": "시멘트 + 테라조 칩" },
           { "label": "사이즈", "value": "지름 12cm x 높이 10cm" },
           { "label": "색상", "value": "화이트 테라조" },
-          { "label": "배수", "value": "하단 배수홀 있음" }
+          { "label": "배수", "value": "하단 배수홀 있음" },
+          { "label": "제조", "value": "핸드메이드" }
         ],
-        "html": "<p>테라조 패턴 화분입니다.</p><p>작은 식물과 잘 어울립니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>배수홀 있음</li><li>과습 방지</li></ul>"
+        "html": "<p>알록달록한 테라조 칩이 박힌 감각적인 시멘트 화분입니다.</p><p>테라조 특유의 독특한 패턴이 공간에 재미와 생기를 더합니다. 하단에 배수홀이 있어 과습을 방지하며 식물이 건강하게 자랄 수 있는 환경을 만들어줍니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>하단 배수홀이 있어 과습 방지에 효과적입니다</li><li>받침대는 별도 구매가 필요합니다</li><li>핸드메이드 특성상 테라조 패턴이 제품마다 다릅니다</li><li>충격에 의해 파손될 수 있으니 주의해주세요</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Plant Tip</strong><br/>다육식물, 선인장, 소형 관엽식물과 특히 잘 어울립니다. 여러 개를 모아두면 미니 정원 같은 분위기를 연출할 수 있습니다.</p>"
       }
     },
-
     {
       "id": 7,
       "name": "아치형 프레임 거울",
@@ -114,13 +117,93 @@
       "description": "아치형 골드 프레임 거울, 공간을 넓고 세련되게 만들어줍니다",
       "detail": {
         "specs": [
-          { "label": "소재", "value": "메탈 프레임 + 유리" },
+          { "label": "소재", "value": "메탈 프레임 + 강화유리" },
           { "label": "사이즈", "value": "40 x 120cm" },
           { "label": "색상", "value": "골드" },
-          { "label": "설치", "value": "벽걸이형 (앙카 포함)" }
+          { "label": "설치", "value": "벽걸이형 (앙카 및 나사 포함)" },
+          { "label": "무게", "value": "약 3.2kg" }
         ],
-        "html": "<p>아치형 골드 프레임 거울입니다.</p><p>공간 확장 효과</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>앙카 포함</li><li>2인 설치 권장</li></ul>"
+        "html": "<p>우아한 아치형 실루엣과 골드 메탈 프레임이 조화를 이루는 풀렝스 거울입니다.</p><p>거울 하나로 공간이 넓어 보이는 효과는 물론, 인테리어의 포인트가 되어줍니다. 침실, 드레스룸, 현관 등 어디에 두어도 세련된 분위기를 연출합니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>설치용 앙카 및 나사가 포함되어 있습니다</li><li>안전을 위해 2인 이상 설치를 권장합니다</li><li>유리 파손 위험이 있으니 취급에 각별히 주의해주세요</li><li>거울 표면은 부드러운 천으로 닦아주세요</li><li>콘크리트 벽 설치 시 별도 공구가 필요할 수 있습니다</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Interior Tip</strong><br/>침실 한쪽 벽면에 세워두거나, 현관 입구에 배치하면 공간이 한층 넓고 고급스러워 보입니다. SNS 포토존으로도 인기 있는 아이템입니다.</p>"
       }
+    },
+    {
+      "id": 8,
+      "name": "베이지 린넨 쿠션",
+      "price": 31000,
+      "category": "cushion",
+      "image": "/images/product-08.webp",
+      "description": "베이지 톤 린넨 쿠션, 소파 위에 자연스러운 포인트",
+      "detail": {
+        "specs": [
+          { "label": "소재", "value": "린넨 혼방 (린넨 55% / 면 45%)" },
+          { "label": "사이즈", "value": "45 x 45cm" },
+          { "label": "색상", "value": "베이지" },
+          { "label": "충전재", "value": "폴리에스터 솜" },
+          { "label": "세탁", "value": "세탁기 가능 (30도 이하, 단독 세탁)" }
+        ],
+        "html": "<p>은은한 베이지 톤의 린넨 혼방 쿠션입니다.</p><p>부드러운 촉감과 자연스러운 색감으로 소파, 침대, 의자 위 어디에나 잘 어울립니다. 속커버가 포함된 완제품으로 별도 구매 없이 바로 사용할 수 있습니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>속커버 포함 완제품입니다</li><li>세탁기 사용 가능하나 단독 세탁을 권장합니다</li><li>건조기 사용 시 수축될 수 있으니 자연 건조를 권장합니다</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Styling Tip</strong><br/>다양한 사이즈와 소재의 쿠션을 레이어드하면 더욱 풍성하고 감각적인 소파 스타일링이 완성됩니다.</p>"
+      }
+    },
+    {
+      "id": 9,
+      "name": "미니멀 테이블 램프",
+      "price": 87000,
+      "category": "lamp",
+      "image": "/images/product-09.webp",
+      "description": "미니멀 디자인 테이블 램프, 은은한 조명을 제공합니다",
+      "detail": {
+        "specs": [
+          { "label": "소재", "value": "메탈 + 패브릭 쉐이드" },
+          { "label": "사이즈", "value": "지름 20cm x 높이 40cm" },
+          { "label": "색상", "value": "블랙" },
+          { "label": "소켓", "value": "E26 (전구 별도 구매)" },
+          { "label": "전압", "value": "220V" }
+        ],
+        "html": "<p>군더더기 없는 미니멀한 디자인의 테이블 램프입니다.</p><p>블랙 메탈 스탠드와 부드러운 패브릭 쉐이드의 조합이 어떤 공간에도 자연스럽게 어우러집니다. 침실, 서재, 거실 사이드 테이블 위에 두면 아늑한 분위기를 연출할 수 있습니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>전구는 별도 구매가 필요합니다 (E26 소켓)</li><li>LED 전구 사용을 권장합니다 (최대 60W)</li><li>KC 인증 제품입니다</li><li>전선 길이: 약 1.5m</li><li>젖은 손으로 취급하지 마세요</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Lighting Tip</strong><br/>전구 색온도에 따라 분위기가 달라집니다. 따뜻한 분위기를 원하신다면 2700K~3000K 전구를, 집중이 필요한 서재라면 4000K 전구를 추천합니다.</p>"
+      }
+    },
+    {
+      "id": 10,
+      "name": "코튼 테이블 클로스",
+      "price": 37000,
+      "category": "textile",
+      "image": "/images/product-10.webp",
+      "description": "코튼 테이블 클로스, 식탁 위를 부드럽게 연출합니다",
+      "detail": {
+        "specs": [
+          { "label": "소재", "value": "면 100%" },
+          { "label": "사이즈", "value": "140 x 180cm (4~6인 테이블 적합)" },
+          { "label": "색상", "value": "오프화이트" },
+          { "label": "세탁", "value": "세탁기 가능 (30도 이하)" },
+          { "label": "원산지", "value": "국내 제조" }
+        ],
+        "html": "<p>부드러운 면 소재로 제작된 테이블 클로스입니다.</p><p>오프화이트의 은은한 색감이 식탁 위를 깔끔하고 우아하게 연출합니다. 4~6인 테이블에 적합한 사이즈로 일상적인 식사 자리부터 특별한 홈 다이닝까지 폭넓게 활용할 수 있습니다.</p><ul class='list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300'><li>세탁기 사용 가능하나 30도 이하 저온 세탁을 권장합니다</li><li>표백제 사용을 피해주세요</li><li>처음 세탁 시 약간의 수축이 있을 수 있습니다</li><li>다림질 가능합니다 (중온)</li></ul><hr class='my-4 border-gray-200 dark:border-gray-800' /><p><strong>✦ Table Setting Tip</strong><br/>린넨 냅킨, 우드 식기와 함께 코디하면 자연스럽고 감각적인 테이블 세팅이 완성됩니다. 계절마다 화병과 캔들을 바꿔가며 연출해보세요.</p>"
+      }
+    },
+    {
+      "id": 11,
+      "name": "대리석 코스터 세트",
+      "price": 36000,
+      "category": "coaster",
+      "image": "/images/product-11.webp",
+      "description": "천연 대리석 코스터 4개 세트, 테이블을 고급스럽게 연출합니다",
+      "detail": {
+        "specs": [
+          { "label": "소재", "value": "천연 대리석" },
+          { "label": "사이즈", "value": "지름 10cm x 두께 0.8cm" },
+          { "label": "색상", "value": "화이트 마블" },
+          { "label": "구성", "value": "4개 세트" },
+          { "label": "하단", "value": "미끄럼 방지 패드 부착" }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "린넨 테이블 러너",
+      "price": 22000,
+      "category": "textile",
+      "image": "/images/product-12.webp",
+      "description": "내추럴 린넨 테이블 러너, 식탁 위 분위기를 한층 높여줍니다"
     }
   ],
   "reviews": [
