@@ -1,6 +1,6 @@
 # LIVIN
 
-> 실제 쇼핑몰 서비스 흐름을 구현한 React 기반 UI/상태관리 포트폴리오
+> React 기반으로 커머스 서비스의 핵심 사용자 흐름과 상태관리 구조를 구현한 포트폴리오 프로젝트
 
 - 🔗 **배포 URL**: https://livn-rose.vercel.app/
 - 📚 **Storybook (Chromatic)**: https://main--69df25ecd988b74cfddf6bf7.chromatic.com/
@@ -40,21 +40,21 @@
 
 ## ⚙️ 기술적 의사결정
 
-### Zustand를 선택한 이유
+### Zustand
 
-Redux 대비 보일러플레이트가 적고, 장바구니처럼 클라이언트 상태관리에 최적화되어 있습니다. `create` 함수 하나로 스토어를 정의할 수 있어 코드가 직관적입니다.
+Redux 대비 보일러플레이트가 적고, 장바구니처럼 클라이언트 상태관리에 최적화되어 있습니다.
 
-### TanStack Query를 도입한 이유
+### TanStack Query
 
-기존 `useEffect` + `useState` 방식은 페이지 이동 시마다 API를 재호출했습니다. React Query 도입 후 `staleTime` 설정으로 5분간 캐시를 유지해 불필요한 API 호출을 줄였습니다.
+`useEffect` + `useState` 방식에서 벗어나, `staleTime` 5분 캐시로 불필요한 API 재호출을 줄였습니다.
 
-### Vercel Serverless Function을 사용한 이유
+### Vercel Serverless Function
 
-json-server는 로컬에서만 동작하므로, 배포 환경에서는 Vercel Serverless Function으로 동일한 REST API 구조를 구현했습니다. 백엔드 없이도 실제 API 통신 구조를 재현할 수 있습니다.
+json-server는 로컬 전용이므로, 배포 환경에서 동일한 REST API 구조를 Serverless Function으로 구현했습니다.
 
-### useMemo로 필터링 최적화
+### useMemo 최적화
 
-카테고리 필터 + 검색 + 정렬이 복합적으로 동작하는 상품 목록을 `useMemo`로 감싸, `products`, `activeCategory`, `debouncedSearch`, `sortOrder`가 변경될 때만 재계산되도록 최적화했습니다.
+카테고리 필터 + 검색 + 정렬이 복합적으로 동작하는 상품 목록을 `useMemo`로 최적화했습니다.
 
 ---
 
